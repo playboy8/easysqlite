@@ -1,7 +1,7 @@
 // easySQLite.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
+//#include "stdafx.h"
 
 #include "easySQLite/SqlCommon.h"
 #include "easySQLite/SqlField.h"
@@ -142,7 +142,7 @@ void example2()
 }
 
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
 	//example1();
 	//example2();
