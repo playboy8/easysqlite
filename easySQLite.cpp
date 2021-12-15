@@ -32,7 +32,8 @@ void example1()
 	try
 	{
 		//open database file
-		db.open("test.db");
+		//db.open("test.db"); 
+		db.open(":memory:");
 
 		//define table object
 		Table tbPerson(db.getHandle(), "person", definition_tbPerson);
@@ -53,19 +54,14 @@ void example1()
 		record.setTime("birthdate", time::now());
 
 		//add 10 records
-		for (int index = 0; index < 10; index++)
-			tbPerson.addRecord(&record);
+		//for (int index = 0; index < 10; index++)
+		//	tbPerson.addRecord(&record);
 
 		//select record to update
-		if (Record* record = tbPerson.getRecordByKeyId(7))
+		for(int i = 0 ; i < 10000; i++)
 		{
-			record->setString("fname", "Frank");
-			record->setString("lname", "Sinatra");
-			record->setNull("birthdate");
-
-			tbPerson.updateRecord(record);
+			tbPerson.addRecord(&record);
 		}
-
 		//load all records
 		tbPerson.open();
 
@@ -144,7 +140,7 @@ void example2()
 
 int main(int argc, char* argv[])
 {
-	//example1();
+	example1();
 	//example2();
 
 	sql::log("");
