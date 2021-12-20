@@ -17,3 +17,52 @@ Why easySQLite solution is better than others ?
 
 Find more information in included html file and usage examples in project package.
 
+
+Platform:
+
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+CPU(s):              4
+Model name:          Intel(R) Xeon(R) Platinum 8269CY CPU @ 2.50GHz
+CPU MHz:             2500.002
+
+Test in memory mode
+
+insert 
+collume_size   insert_count   delay_ms_1(逐条插入)   delay_ms_2(批量插入)  
+2                 100W          12987                 11537
+3                 100W          14665                 13428   
+4                 100W          18587                 15953          
+5                 100W          20515                 17970      
+6                 100W          22600                 21847    
+7                 100W          24936                 23528       
+8                 100W          27675                 25995       
+
+
+
+
+
+对于插入100W条数句，每增加一列数据， 平均增加延迟 2448 ms。
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+

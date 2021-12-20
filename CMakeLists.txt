@@ -16,11 +16,9 @@ else()
         set (lib "hiredis.so")
 endif()
 
-file( GLOB  sources  ${CMAKE_SOURCE_DIR}    ./*.cpp   ${CMAKE_SOURCE_DIR}/easySQLite/* ./UnitTest++/src/* ./UnitTest++/src/Posix/*     )
-#file( GLOB  header  ${CMAKE_SOURCE_DIR}    ./*.cpp   ${CMAKE_SOURCE_DIR}/easySQLite/*  ./UnitTest++/src/*  )
+file( GLOB  sources  ${CMAKE_SOURCE_DIR}    ./*.cpp   ${CMAKE_SOURCE_DIR}/easySQLite/* ./UnitTest++/src/* ./UnitTest++/src/Posix/*   ./opt/*  )
+#file( GLOB  header  ${CMAKE_SOURCE_DIR}    ${CMAKE_SOURCE_DIR}/easySQLite/*.h  ./UnitTest++/src/*.h  ./opt/*.h)
 
-#if used  boost  KDB
-# add_definitions(-DKXVER=3) 
 add_definitions(-DLINUX)
 #add_definitions(-DBOOST_ALL_DYN_LINK)
 
